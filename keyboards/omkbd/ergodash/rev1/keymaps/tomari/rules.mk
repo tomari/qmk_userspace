@@ -1,0 +1,14 @@
+BACKLIGHT_ENABLE = no
+RGBLIGHT_ENABLE = yes
+AUDIO_ENABLE = no
+VIA_ENABLE = no
+LTO_ENABLE = yes
+SPACE_CADET_ENABLE = no
+GRAVE_ESC_ENABLE = no
+DEBOUNCE_TYPE = sym_eager_pk
+CONSOLE_ENABLE = no         # Console for debug
+COMMAND_ENABLE = no         # Commands for debug and configuration
+NKRO_ENABLE = yes           # Enable N-Key Rollover
+OS_DETECTION_ENABLE = yes
+DEFERRED_EXEC_ENABLE = no
+MOUSEKEY_ENABLE = yes
