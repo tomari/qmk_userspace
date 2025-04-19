@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_MINS,                        KC_EQL,  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
            KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_LNG2,                        KC_LNG1, KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
            KC_ESC,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LGUI,                        KC_RALT, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_UP,
-        MO(_UPPER), KC_F12,  KC_DEL,  KC_RCTL, LALT_T(KC_LNG2), KC_LSFT, KC_SPC,     KC_ENT,MO(_LOWER), RALT_T(KC_LNG1),    TT(_NUM),KC_LEFT, KC_RGHT, KC_DOWN
+        TT(_UPPER), KC_F12,  KC_DEL,  KC_RCTL, LALT_T(KC_LNG2), KC_LSFT, KC_SPC,     KC_ENT,MO(_LOWER), RALT_T(KC_LNG1),    TT(_NUM),KC_LEFT, KC_RGHT, KC_DOWN
   ),
   /* Lower
    * ,----------------------------------------------------------------------------------------------------------------------.
@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_MPRV,                        KC_MNXT, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_PGUP,
     _______,  _______, KC_SCRL, KC_PAUS, KC_MINS, KC_EQL,  _______,                        _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_NO,   KC_PGDN,
  MO(_ADJUST), KC_F19,  KC_F20,  KC_F21,  KC_F22,  KC_F23,  _______,                        _______, KC_NO,   KC_NO,   KC_LBRC, KC_RBRC, KC_NO,   KC_NO,
-    KC_PSCR,  KC_APP,  KC_INS, _______,          _______,  _______, KC_BSPC,      _______, _______, _______,         TG(_NUM), KC_HOME, KC_END,  MO(_UPPER)
+    _______,  KC_APP,  KC_INS, _______,          _______,  _______, KC_BSPC,      _______, _______, _______,         TG(_NUM), KC_HOME, KC_END,  MO(_UPPER)
   ),
 
   [_UPPER] = LAYOUT(
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, KC_WBAK, KC_UP,   KC_WFWD, KC_PGUP, _______, _______,                        _______, _______, _______, _______, KC_PSCR, KC_SCRL, KC_PAUS,
     _______, KC_LEFT, KC_DOWN, KC_RIGHT,KC_PGDN, _______, _______,                        _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,                        _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______,          _______, _______, KC_BSPC,      _______, _______, _______,          _______, _______, _______, _______
+    _______, _______, _______, _______,          KC_LALT, _______, KC_BSPC,      _______, _______, KC_RALT,          _______, _______, _______, _______
   ),
 
   [_NUM] = LAYOUT(
