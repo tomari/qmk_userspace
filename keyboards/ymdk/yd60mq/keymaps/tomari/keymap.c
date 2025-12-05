@@ -48,13 +48,13 @@ LT(_NUM,KC_LNG2),KC_LGUI, KC_LALT,                 KC_SPC,  KC_SPC,  KC_SPC,    
         QK_BOOT, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_KP_7, KC_KP_8, KC_KP_9, KC_PAST, _______, KC_PEQL, KC_EJCT, KC_PWR,
         _______, MS_BTN4, MS_UP,   MS_BTN5, _______, _______, _______, KC_KP_4, KC_KP_5, KC_KP_6, KC_PMNS, MS_BTN2, MS_BTN3, _______,
         _______, MS_LEFT, MS_DOWN, MS_RGHT, _______, _______, _______, KC_KP_1, KC_KP_2, KC_KP_3, KC_PPLS, MS_BTN1, _______, KC_PENT,
-        _______, _______, KC_ACL0, KC_ACL1, KC_ACL2, _______, _______, KC_NUM,  KC_KP_0, _______, KC_PDOT, KC_PSLS, _______, _______, _______,
+        _______, _______, MS_ACL0, MS_ACL1, MS_ACL2, _______, _______, KC_NUM,  KC_KP_0, _______, KC_PDOT, KC_PSLS, _______, _______, _______,
         _______, _______, _______,                   _______, _______, _______,                   _______, _______, _______, _______, _______
     ),
 
     [_ADJ] = LAYOUT_all(
         QK_BOOT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, RGB_TOG, _______, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, _______, KC_UP,   _______, KC_DEL,
+        _______, UG_TOGG, _______, UG_NEXT, UG_HUEU, UG_HUED, UG_SATU, UG_SATD, UG_VALU, UG_VALD, _______, KC_UP,   _______, KC_DEL,
         _______, _______, _______, _______, _______, EE_CLR,  _______, _______, KC_HOME, KC_PGUP, KC_LEFT, KC_RGHT, _______, _______,
         _______, _______, NK_TOGG, _______, BL_DOWN, BL_TOGG, BL_UP,   AG_NORM, AG_SWAP, KC_END,  KC_PGDN, KC_DOWN, _______, _______, _______,
         _______, _______, _______,                   _______, _______, _______,                   _______, _______, _______, _______, _______
