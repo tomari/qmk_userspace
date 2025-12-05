@@ -64,10 +64,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_NUM] = LAYOUT(
     _______, KC_STOP, KC_AGIN, KC_MENU, KC_UNDO, KC_SLCT, KC_HELP,                        _______, _______, KC_KP_7, KC_KP_8, KC_KP_9, KC_PAST, KC_MUTE,
-    _______, _______, KC_BTN4, KC_MS_U, KC_BTN5, KC_WH_U, _______,                        KC_PEQL, _______, KC_KP_4, KC_KP_5, KC_KP_6, KC_PMNS, KC_VOLU,
-    _______, _______, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, _______,                        _______, _______, KC_KP_1, KC_KP_2, KC_KP_3, KC_PPLS, KC_VOLD,
- MO(_ADJUST),KC_COPY, KC_EXEC,KC_PASTE, KC_FIND, KC_CUT,  KC_BTN3,                        _______, KC_NUM,  KC_KP_0, _______, KC_PDOT, KC_PSLS, KC_WSTP,
-    _______, _______, KC_INS,  _______,          KC_RCTL, KC_BTN2, KC_BTN1,       KC_PENT,_______, _______,          _______, KC_WBAK, KC_WFWD, KC_WREF
+    _______, _______, MS_BTN4, MS_UP,   MS_BTN5, MS_WHLU, _______,                        KC_PEQL, _______, KC_KP_4, KC_KP_5, KC_KP_6, KC_PMNS, KC_VOLU,
+    _______, _______, MS_LEFT, MS_DOWN, MS_RGHT, MS_WHLD, _______,                        _______, _______, KC_KP_1, KC_KP_2, KC_KP_3, KC_PPLS, KC_VOLD,
+ MO(_ADJUST),KC_COPY, KC_EXEC,KC_PASTE, KC_FIND, KC_CUT,  MS_BTN3,                        _______, KC_NUM,  KC_KP_0, _______, KC_PDOT, KC_PSLS, KC_WSTP,
+    _______, _______, KC_INS,  _______,          KC_RCTL, MS_BTN2, MS_BTN1,       KC_PENT,_______, _______,          _______, KC_WBAK, KC_WFWD, KC_WREF
   ),
 
   [_ADJUST] = LAYOUT(

@@ -46,8 +46,8 @@ LT(_NUM,KC_LNG2),KC_LGUI, KC_LALT,                 KC_SPC,  KC_SPC,  KC_SPC,    
 
     [_NUM] = LAYOUT_all(
         QK_BOOT, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_KP_7, KC_KP_8, KC_KP_9, KC_PAST, _______, KC_PEQL, KC_EJCT, KC_PWR,
-        _______, KC_BTN4, KC_MS_U, KC_BTN5, _______, _______, _______, KC_KP_4, KC_KP_5, KC_KP_6, KC_PMNS, KC_BTN2, KC_BTN3, _______,
-        _______, KC_MS_L, KC_MS_D, KC_MS_R, _______, _______, _______, KC_KP_1, KC_KP_2, KC_KP_3, KC_PPLS, KC_BTN1, _______, KC_PENT,
+        _______, MS_BTN4, MS_UP,   MS_BTN5, _______, _______, _______, KC_KP_4, KC_KP_5, KC_KP_6, KC_PMNS, MS_BTN2, MS_BTN3, _______,
+        _______, MS_LEFT, MS_DOWN, MS_RGHT, _______, _______, _______, KC_KP_1, KC_KP_2, KC_KP_3, KC_PPLS, MS_BTN1, _______, KC_PENT,
         _______, _______, KC_ACL0, KC_ACL1, KC_ACL2, _______, _______, KC_NUM,  KC_KP_0, _______, KC_PDOT, KC_PSLS, _______, _______, _______,
         _______, _______, _______,                   _______, _______, _______,                   _______, _______, _______, _______, _______
     ),
