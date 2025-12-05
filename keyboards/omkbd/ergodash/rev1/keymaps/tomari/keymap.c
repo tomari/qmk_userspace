@@ -96,7 +96,6 @@ enum ledlayer_names {
     _LEDLAYER_CAPSLOCK,
     _LEDLAYER_SCROLLLOCK,
     _LEDLAYER_NUMLOCK,
-    _LEDLAYER_ADJ,
     _LEDLAYER_NUMLAYER,
 };
 
@@ -124,7 +123,6 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     [_LEDLAYER_CAPSLOCK] = my_capslock_layer,
     [_LEDLAYER_SCROLLLOCK] = my_scrollock_layer,
     [_LEDLAYER_NUMLOCK] = my_numlock_layer,
-    [_LEDLAYER_ADJ] = my_layer1_layer,
     [_LEDLAYER_NUMLAYER] = my_layer3_layer
 );
 
@@ -142,7 +140,6 @@ bool led_update_user(led_t led_state) {
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    rgblight_set_layer_state(_LEDLAYER_ADJ, layer_state_cmp(state, _ADJUST));
     rgblight_set_layer_state(_LEDLAYER_NUMLAYER, layer_state_cmp(state, _NUM));
     rgblight_set_layer_state(_LEDLAYER_NUMLOCK, host_keyboard_led_state().num_lock && layer_state_cmp(state, _NUM));
     return state;
