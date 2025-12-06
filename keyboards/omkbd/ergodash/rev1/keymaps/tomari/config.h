@@ -26,9 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 // #define EE_HANDS
 #define RGBLIGHT_SLEEP
-#define RGBLIGHT_LAYERS
-#define RGBLIGHT_LAYERS_OVERRIDE_RGB_OFF
 #define RGBLIGHT_SPLIT
+#define RGBLIGHT_LIMIT_VAL 96
 
 #define USB_POLLING_INTERVAL_MS 1
 
