@@ -28,9 +28,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_SLEEP
 #define RGBLIGHT_SPLIT
 #define RGBLIGHT_LIMIT_VAL 96
-#define WS2812_TRST_US 3000
-
-#define USB_POLLING_INTERVAL_MS 1
 
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
