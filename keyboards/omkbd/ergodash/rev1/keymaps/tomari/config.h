@@ -29,12 +29,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_SPLIT
 #define RGBLIGHT_LIMIT_VAL 96
 #define RGBLIGHT_LAYERS
-#undef RGBLIGHT_LED_COUNT
-#define RGBLIGHT_LED_COUNT 26
-#undef RGBLED_SPLIT
-#define RGBLED_SPLIT { 13, 13 }
-#undef RGBLIGHT_LED_MAP
-#define RGBLIGHT_LED_MAP { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13 }
+#define SELECT_SOFT_SERIAL_SPEED 4
+#define SPLIT_LAYER_STATE_ENABLE
+#define SPLIT_LED_STATE_ENABLE
 
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
