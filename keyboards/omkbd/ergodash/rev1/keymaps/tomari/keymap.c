@@ -124,8 +124,8 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     [_LEDLAYER_CAPSLOCK] = my_capslock_layer,
     [_LEDLAYER_SCROLLLOCK] = my_scrollock_layer,
     [_LEDLAYER_NUMLOCK] = my_numlock_layer,
-    [_LEDLAYER_NUMLAYER] = my_layer3_layer
-    [_LEDLAYER_OFF] = my_layer1_layer,
+    [_LEDLAYER_NUMLAYER] = my_layer3_layer,
+    [_LEDLAYER_OFF] = my_layer1_layer
 );
 
 void keyboard_post_init_user(void) {
