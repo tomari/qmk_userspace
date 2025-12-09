@@ -96,8 +96,8 @@ enum ledlayer_names {
     _LEDLAYER_CAPSLOCK,
     _LEDLAYER_SCROLLLOCK,
     _LEDLAYER_NUMLOCK,
-    _LEDLAYER_ADJ,
     _LEDLAYER_NUMLAYER,
+    _LEDLAYER_OFF,
 };
 
 const rgblight_segment_t PROGMEM my_capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -113,7 +113,7 @@ const rgblight_segment_t PROGMEM my_numlock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 );
 
 const rgblight_segment_t PROGMEM my_layer1_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {11, 2, HSV_YELLOW}       // Light 2 LEDs, starting with LED 11
+    {11, 2, HSV_OFF}       // turn off
 );
 
 const rgblight_segment_t PROGMEM my_layer3_layer[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -124,8 +124,8 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     [_LEDLAYER_CAPSLOCK] = my_capslock_layer,
     [_LEDLAYER_SCROLLLOCK] = my_scrollock_layer,
     [_LEDLAYER_NUMLOCK] = my_numlock_layer,
-    [_LEDLAYER_ADJ] = my_layer1_layer,
     [_LEDLAYER_NUMLAYER] = my_layer3_layer
+    [_LEDLAYER_OFF] = my_layer1_layer,
 );
 
 void keyboard_post_init_user(void) {
@@ -137,12 +137,12 @@ bool led_update_user(led_t led_state) {
     rgblight_set_layer_state(_LEDLAYER_CAPSLOCK, led_state.caps_lock);
     rgblight_set_layer_state(_LEDLAYER_SCROLLLOCK, led_state.scroll_lock);
     rgblight_set_layer_state(_LEDLAYER_NUMLOCK, led_state.num_lock && layer_state_is(_NUM));
+    rgblight_set_layer_state(_LEDLAYER_OFF, 1);
 
     return true;
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    rgblight_set_layer_state(_LEDLAYER_ADJ, layer_state_cmp(state, _ADJUST));
     rgblight_set_layer_state(_LEDLAYER_NUMLAYER, layer_state_cmp(state, _NUM));
     rgblight_set_layer_state(_LEDLAYER_NUMLOCK, host_keyboard_led_state().num_lock && layer_state_cmp(state, _NUM));
     return state;
