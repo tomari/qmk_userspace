@@ -3,6 +3,7 @@
     "build_targets": [
 	["kagizaraya/chidori", "tomari"],
 	["omkbd/ergodash/rev1", "tomari"],
-	["ymdk/yd60mq/16led", "tomari"]
+	["ymdk/yd60mq/16led", "tomari"],
+	["planck/rev4", "tomari"]
     ]
 }
