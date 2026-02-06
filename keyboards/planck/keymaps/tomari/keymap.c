@@ -25,6 +25,9 @@ enum layer_number { _QWERTY = 0, _LOWER, _RAISE, _ADJUST };
 #define LOWER  MO(_LOWER)
 #define RAISE  MO(_RAISE)
 #define ADJUST MO(_ADJUST)
+#define CTLLNG2 LCTL_T(KC_LNG2)
+#define SFTSPC LSFT_T(KC_SPC)
+#define RAILNG1 LT(_RAISE,KC_LNG1)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -40,26 +43,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
     [_QWERTY] = LAYOUT_planck_grid(
-      KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_MINS,
-      KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-      KC_ESC,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS,
-      LOWER,KC_LGUI, KC_LALT, KC_LNG2, KC_LSFT,  KC_SPC,    KC_ENT,  RAISE,   KC_LNG1, KC_DEL,  KC_EQL,  KC_RCTL
+      KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_MINS, KC_GRV,  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    
+      KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_LBRC, KC_QUOT, KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, 
+      KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_RBRC, KC_BSLS, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, 
+      LOWER,   KC_ESC,  KC_LGUI, KC_LALT, SFTSPC,  CTLLNG2, RAILNG1, KC_ENT,  KC_RSFT, KC_RCTL, KC_DEL,  KC_TAB
     ),
     [_LOWER] = LAYOUT_planck_grid(
-      _______, KC_WBAK, KC_UP,   KC_WFWD, KC_PGUP, KC_MYCM, KC_MPLY, KC_KP_7, KC_KP_8, KC_KP_9, KC_PAST, _______,
-      _______, KC_LEFT, KC_DOWN, KC_RIGHT,KC_PGDN, KC_MPRV, KC_MNXT, KC_KP_4, KC_KP_5, KC_KP_6, KC_PMNS, _______,
-      KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_NUM,  KC_KP_1, KC_KP_2, KC_KP_3, KC_PPLS, BL_STEP,
-      _______, _______, KC_RALT, _______, _______, KC_BSPC, KC_PENT, _______, KC_KP_0, KC_PDOT, KC_PSLS, BL_TOGG
+      _______, KC_WBAK, KC_UP,   KC_WFWD, KC_PGUP, KC_MYCM, KC_MPLY, _______, KC_KP_7, KC_KP_8, KC_KP_9, KC_PAST,
+      _______, KC_LEFT, KC_DOWN, KC_RIGHT,KC_PGDN, KC_MPRV, KC_MNXT, _______, KC_KP_4, KC_KP_5, KC_KP_6, KC_PMNS,
+      KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_NUM,  _______, KC_KP_1, KC_KP_2, KC_KP_3, KC_PPLS,
+      _______, KC_LCTL, _______, _______, KC_SPC,  KC_BSPC, _______, KC_PENT, KC_KP_0, KC_PDOT, KC_RALT, KC_PSLS
     ),
     [_RAISE] = LAYOUT_planck_grid(
-      KC_TILD, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_GRV,
-      _______, _______, _______, _______, KC_MINS, KC_EQL,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_PGUP, KC_BSLS,
-      KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, KC_LBRC, KC_RBRC, KC_PGDN, KC_MUTE,
-      _______, _______, _______, _______, _______, KC_BSPC, _______, _______, KC_NO,   KC_VOLD, KC_VOLU, _______
+      KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    _______, _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    
+      _______, _______, _______, KC_MINS, KC_EQL,  _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_BSLS,
+      KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, _______, KC_LBRC, KC_RBRC, KC_MUTE,
+      _______, _______, _______, _______, _______, _______, _______, _______, KC_NO,   KC_VOLD, KC_VOLU, _______
     ),
     [_ADJUST] = LAYOUT_planck_grid(
       _______, QK_BOOT, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_INS,
-      KC_CAPS, _______, _______, _______, _______, AG_NORM, AG_SWAP, KC_MINS, KC_EQL,  KC_PSCR, KC_SCRL, KC_PAUS,
+      KC_CAPS, BL_TOGG, BL_STEP, _______, _______, AG_NORM, AG_SWAP, KC_MINS, KC_EQL,  KC_PSCR, KC_SCRL, KC_PAUS,
       _______, _______, _______, _______, _______, _______, CK_TOGG, CK_UP,   CK_DOWN, _______, _______, _______,
       _______, _______, _______, _______, _______, _______, _______, _______, KC_HOME, KC_INS,  _______, KC_END
     )
